@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using EAndSSolutions.Model.EntityModel;
 using EAndSSolutions.Model.Model;
+using EAndSSolutions.Model.ResponseModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace EAndSSolutions.Common.AutoMapper
         public AutoMapperRequestProfile()
         {
             CreateMap<User, UserVM>().ReverseMap();
-            //CreateMap<Employee, EmployeeVM>().ReverseMap();
+            CreateMap<MasterData, MasterDataVM>().ReverseMap();
         }
     }
 }

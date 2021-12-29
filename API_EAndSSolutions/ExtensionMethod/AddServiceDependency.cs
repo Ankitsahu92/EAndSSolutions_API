@@ -36,6 +36,9 @@ namespace API_EAndSSolutions.ExtensionMethod
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IUserRepository, UserRepository>();
 
+            services.AddTransient<IMasterDataService, MasterDataService>();
+            services.AddTransient<IMasterDataRepository, MasterDataRepository>();
+
 
             services.AddDbContext<EAndSSolutionsContext>(db => db.UseSqlServer(configuration.GetConnectionString("CoreWebAPI"))
                                                        // .EnableSensitiveDataLogging(true)

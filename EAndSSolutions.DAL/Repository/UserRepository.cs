@@ -23,7 +23,7 @@ namespace EAndSSolutions.DAL.Repository
             this.context = context;
         }
 
-        public async Task<UserVM> AddAndUpdateUser(UserVM userObj)
+        public async Task<UserVM?> AddAndUpdateUser(UserVM userObj)
         {
             bool isSuccess = false;
             if (userObj.Id > 0)
@@ -50,8 +50,13 @@ namespace EAndSSolutions.DAL.Repository
             {
                 User user = mapper.Map<User>(userObj);
                 user.isActive = true;
-                await context.Users.AddAsync(mapper.Map<User>(userObj));
-                isSuccess = await context.SaveChangesAsync() > 0;
+                await context.Users.AddAsync(user);
+                int id = await context.SaveChangesAsync();
+                if (id > 0)
+                {
+                    isSuccess = true;
+                    userObj.Id = id;
+                }
             }
 
             return isSuccess ? userObj : null;

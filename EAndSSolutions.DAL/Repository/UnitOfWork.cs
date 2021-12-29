@@ -20,10 +20,10 @@ namespace EAndSSolutions.DAL.Repository
             this.mapper = mapper;
 
             User = new UserRepository(mapper, context);
-            //Employee = new EmployeeRepository(mapper, context);
+            MasterData = new MasterDataRepository(mapper, context);
         }
         public IUserRepository User { get; private set; }
-        //public IEmployeeRepository Employee { get; private set; }
+        public IMasterDataRepository MasterData { get; private set; }
         public int Complete()
         {
             return context.SaveChanges();

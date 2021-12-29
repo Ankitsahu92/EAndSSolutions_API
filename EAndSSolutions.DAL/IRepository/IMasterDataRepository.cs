@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace EAndSSolutions.DAL.IRepository
 {
-    public interface IUserRepository : IGenericRepository<User>
+    public interface IMasterDataRepository : IGenericRepository<MasterData>
     {
-        Task<UserVM?> AddAndUpdateUser(UserVM userObj);
+        Task<MasterDataVM?> AddAndUpdateMasterData(MasterDataVM obj);
     }
 }

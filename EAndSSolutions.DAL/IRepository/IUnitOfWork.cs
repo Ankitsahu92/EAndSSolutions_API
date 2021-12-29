@@ -9,7 +9,7 @@ namespace EAndSSolutions.DAL.IRepository
     public interface IUnitOfWork : IDisposable
     {
         IUserRepository User { get; }
-        //IEmployeeRepository Employee { get; }
+        IMasterDataRepository MasterData { get; }
         //IQuestionsRepository Questions { get; }
         int Complete();
         Task<int> CompleteAsync();
