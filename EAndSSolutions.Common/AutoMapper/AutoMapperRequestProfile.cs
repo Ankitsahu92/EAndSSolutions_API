@@ -16,6 +16,8 @@ namespace EAndSSolutions.Common.AutoMapper
         {
             CreateMap<User, UserVM>().ReverseMap();
             CreateMap<MasterData, MasterDataVM>().ReverseMap();
+            CreateMap<Employee, EmployeeVM>().ReverseMap();
+            CreateMap<Client, ClientVM>().ReverseMap();
         }
     }
 }

@@ -21,9 +21,13 @@ namespace EAndSSolutions.DAL.Repository
 
             User = new UserRepository(mapper, context);
             MasterData = new MasterDataRepository(mapper, context);
+            Employee = new EmployeeRepository(mapper, context);
+            Client = new ClientRepository(mapper, context);
         }
         public IUserRepository User { get; private set; }
         public IMasterDataRepository MasterData { get; private set; }
+        public IEmployeeRepository Employee { get; private set; }
+        public IClientRepository Client { get; private set; }
         public int Complete()
         {
             return context.SaveChanges();

@@ -49,6 +49,18 @@ namespace API_EAndSSolutions.Controllers
             return Ok(await service.GetCaseCoordinatorList());
         }
 
+        [HttpGet("GetHRSupervisorList")]
+        public async Task<IActionResult> GetHRSupervisorList()
+        {
+            return Ok(await service.GetHRSupervisorList());
+        }
+
+        [HttpGet("GetEthnicityList")]
+        public async Task<IActionResult> GetEthnicityList()
+        {
+            return Ok(await service.GetEthnicityList());
+        }
+
         [HttpPost("AddUpdateGenderInfo")]
         public async Task<IActionResult> AddUpdateGenderInfo(MasterDataRequest obj)
         {
@@ -110,6 +122,32 @@ namespace API_EAndSSolutions.Controllers
                 Name = obj.Name,
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.CaseCoordinator
+            };
+            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+        }
+
+        [HttpPost("AddUpdateHRSupervisorInfo")]
+        public async Task<IActionResult> AddUpdateHRSupervisorInfo(MasterDataRequest obj)
+        {
+            MasterDataVM masterDataVM = new MasterDataVM()
+            {
+                Id = obj.Id,
+                Name = obj.Name,
+                isActive = obj.isActive,
+                Type = (int)MasterDataEnums.HRSupervisor
+            };
+            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+        }
+
+        [HttpPost("AddUpdateEthnicityInfo")]
+        public async Task<IActionResult> AddUpdateEthnicityInfo(MasterDataRequest obj)
+        {
+            MasterDataVM masterDataVM = new MasterDataVM()
+            {
+                Id = obj.Id,
+                Name = obj.Name,
+                isActive = obj.isActive,
+                Type = (int)MasterDataEnums.Ethnicity
             };
             return Ok(await service.AddAndUpdateMasterData(masterDataVM));
         }

@@ -17,6 +17,8 @@ namespace EAndSSolutions.Entity.Context
 
         public DbSet<User> Users { get; set; }
         public DbSet<MasterData> MasterDatas { get; set; }
+        public DbSet<Client> Client { get; set; }
+        public DbSet<Employee> Employee { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasData(
@@ -72,7 +74,56 @@ namespace EAndSSolutions.Entity.Context
                     Type = (int)MasterDataEnums.State,
                     CreatedBy = 1,
                     CreatedOn = DateTime.Now
-                }
+                },
+                 new MasterData
+                 {
+                     Id = 6,
+                     Name = "Case Coordinator 1",
+                     Type = (int)MasterDataEnums.CaseCoordinator,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 7,
+                     Name = "Case Coordinator 2",
+                     Type = (int)MasterDataEnums.CaseCoordinator,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 8,
+                     Name = "HR Supervisor 1",
+                     Type = (int)MasterDataEnums.HRSupervisor,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 9,
+                     Name = "HR Supervisor 2",
+                     Type = (int)MasterDataEnums.HRSupervisor,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 10,
+                     Name = "Ethnicity 1",
+                     Type = (int)MasterDataEnums.Ethnicity,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 11,
+                     Name = "Ethnicity 2",
+                     Type = (int)MasterDataEnums.Ethnicity,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }
+
             );
         }
     }

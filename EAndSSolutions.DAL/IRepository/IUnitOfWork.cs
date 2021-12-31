@@ -10,7 +10,9 @@ namespace EAndSSolutions.DAL.IRepository
     {
         IUserRepository User { get; }
         IMasterDataRepository MasterData { get; }
-        //IQuestionsRepository Questions { get; }
+
+        IEmployeeRepository Employee { get; }
+        IClientRepository Client { get; }
         int Complete();
         Task<int> CompleteAsync();
     }

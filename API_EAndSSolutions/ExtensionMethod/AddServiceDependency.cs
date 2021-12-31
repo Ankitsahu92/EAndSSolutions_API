@@ -39,8 +39,13 @@ namespace API_EAndSSolutions.ExtensionMethod
             services.AddTransient<IMasterDataService, MasterDataService>();
             services.AddTransient<IMasterDataRepository, MasterDataRepository>();
 
+            services.AddTransient<IClientRepository, ClientRepository>();
+            services.AddTransient<IClientService, ClientService>();
 
-            services.AddDbContext<EAndSSolutionsContext>(db => db.UseSqlServer(configuration.GetConnectionString("CoreWebAPI"))
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+            services.AddTransient<IEmployeeService, EmployeeService>();
+
+            services.AddDbContext<EAndSSolutionsContext>(db => db.UseSqlServer(configuration.GetConnectionString("EAndSSolutions"))
                                                        // .EnableSensitiveDataLogging(true)
                                                        , ServiceLifetime.Scoped);
             services.AddAutoMapper(typeof(AutoMapperRequestProfile));
