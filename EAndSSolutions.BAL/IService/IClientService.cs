@@ -11,6 +11,6 @@ namespace EAndSSolutions.BAL.IService
     {
         Task<IEnumerable<ClientVM>> GetAll();
         Task<ClientVM> GetById(int id);
-        Task<ClientVM?> AddAndUpdateUser(ClientVM obj);
+        Task<ClientVM?> AddAndUpdateClient(ClientVM obj);
     }
 }

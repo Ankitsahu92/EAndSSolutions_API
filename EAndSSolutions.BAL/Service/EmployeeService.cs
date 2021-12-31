@@ -23,7 +23,7 @@ namespace EAndSSolutions.BAL.Service
             this.repository = repository;
             this.unitOfWork = unitOfWork;
         }
-        public async Task<EmployeeVM?> AddAndUpdateUser(EmployeeVM obj)
+        public async Task<EmployeeVM?> AddAndUpdateEmployee(EmployeeVM obj)
         {
             return await repository.AddAndUpdateEmployee(obj);
         }

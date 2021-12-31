@@ -1,6 +1,7 @@
 ﻿using EAndSSolutions.BAL.IService;
 using EAndSSolutions.Model.Model;
 using EAndSSolutions.Model.RequestModel;
+using EAndSSolutions.Model.ResponseModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using static EAndSSolutions.Common.Enums.Enums;
@@ -71,7 +72,15 @@ namespace API_EAndSSolutions.Controllers
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.Gender
             };
-            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "Gender Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
         }
 
         [HttpPost("AddUpdateStateInfo")]
@@ -84,7 +93,15 @@ namespace API_EAndSSolutions.Controllers
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.State
             };
-            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "State Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
         }
 
         [HttpPost("AddUpdateMaritalStatusInfo")]
@@ -97,7 +114,15 @@ namespace API_EAndSSolutions.Controllers
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.MaritalStatus
             };
-            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "MaritalStatus Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
         }
 
         [HttpPost("AddUpdateNurseInfo")]
@@ -110,7 +135,15 @@ namespace API_EAndSSolutions.Controllers
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.Nurse
             };
-            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "Nurse Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
         }
 
         [HttpPost("AddUpdateCaseCoordinatorInfo")]
@@ -123,7 +156,15 @@ namespace API_EAndSSolutions.Controllers
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.CaseCoordinator
             };
-            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "Case Coordinator Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
         }
 
         [HttpPost("AddUpdateHRSupervisorInfo")]
@@ -136,7 +177,15 @@ namespace API_EAndSSolutions.Controllers
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.HRSupervisor
             };
-            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "HR Supervisor Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
         }
 
         [HttpPost("AddUpdateEthnicityInfo")]
@@ -149,7 +198,15 @@ namespace API_EAndSSolutions.Controllers
                 isActive = obj.isActive,
                 Type = (int)MasterDataEnums.Ethnicity
             };
-            return Ok(await service.AddAndUpdateMasterData(masterDataVM));
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "Ethnicity Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
         }
     }
 }
