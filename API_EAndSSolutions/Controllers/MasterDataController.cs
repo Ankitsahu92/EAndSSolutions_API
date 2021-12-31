@@ -26,42 +26,6 @@ namespace API_EAndSSolutions.Controllers
             return Ok(await service.GetGenderList());
         }
 
-        [HttpGet("GetNurseList")]
-        public async Task<IActionResult> GetNurseList()
-        {
-            return Ok(await service.GetNurseList());
-        }
-
-        [HttpGet("GetStateList")]
-        public async Task<IActionResult> GetStateList()
-        {
-            return Ok(await service.GetStateList());
-        }
-
-        [HttpGet("GetMaritalStatusList")]
-        public async Task<IActionResult> GetMaritalStatusList()
-        {
-            return Ok(await service.GetMaritalStatusList());
-        }
-
-        [HttpGet("GetCaseCoordinatorList")]
-        public async Task<IActionResult> GetCaseCoordinatorList()
-        {
-            return Ok(await service.GetCaseCoordinatorList());
-        }
-
-        [HttpGet("GetHRSupervisorList")]
-        public async Task<IActionResult> GetHRSupervisorList()
-        {
-            return Ok(await service.GetHRSupervisorList());
-        }
-
-        [HttpGet("GetEthnicityList")]
-        public async Task<IActionResult> GetEthnicityList()
-        {
-            return Ok(await service.GetEthnicityList());
-        }
-
         [HttpPost("AddUpdateGenderInfo")]
         public async Task<IActionResult> AddUpdateGenderInfo(MasterDataRequest obj)
         {
@@ -81,6 +45,12 @@ namespace API_EAndSSolutions.Controllers
                 response.Data = result;
             }
             return Ok(response);
+        }
+
+        [HttpGet("GetStateList")]
+        public async Task<IActionResult> GetStateList()
+        {
+            return Ok(await service.GetStateList());
         }
 
         [HttpPost("AddUpdateStateInfo")]
@@ -104,6 +74,12 @@ namespace API_EAndSSolutions.Controllers
             return Ok(response);
         }
 
+        [HttpGet("GetMaritalStatusList")]
+        public async Task<IActionResult> GetMaritalStatusList()
+        {
+            return Ok(await service.GetMaritalStatusList());
+        }
+
         [HttpPost("AddUpdateMaritalStatusInfo")]
         public async Task<IActionResult> AddUpdateMaritalStatusInfo(MasterDataRequest obj)
         {
@@ -123,6 +99,12 @@ namespace API_EAndSSolutions.Controllers
                 response.Data = result;
             }
             return Ok(response);
+        }
+
+        [HttpGet("GetNurseList")]
+        public async Task<IActionResult> GetNurseList()
+        {
+            return Ok(await service.GetNurseList());
         }
 
         [HttpPost("AddUpdateNurseInfo")]
@@ -146,6 +128,12 @@ namespace API_EAndSSolutions.Controllers
             return Ok(response);
         }
 
+        [HttpGet("GetCaseCoordinatorList")]
+        public async Task<IActionResult> GetCaseCoordinatorList()
+        {
+            return Ok(await service.GetCaseCoordinatorList());
+        }
+
         [HttpPost("AddUpdateCaseCoordinatorInfo")]
         public async Task<IActionResult> AddUpdateCaseCoordinatorInfo(MasterDataRequest obj)
         {
@@ -167,6 +155,12 @@ namespace API_EAndSSolutions.Controllers
             return Ok(response);
         }
 
+        [HttpGet("GetHRSupervisorList")]
+        public async Task<IActionResult> GetHRSupervisorList()
+        {
+            return Ok(await service.GetHRSupervisorList());
+        }
+
         [HttpPost("AddUpdateHRSupervisorInfo")]
         public async Task<IActionResult> AddUpdateHRSupervisorInfo(MasterDataRequest obj)
         {
@@ -186,6 +180,12 @@ namespace API_EAndSSolutions.Controllers
                 response.Data = result;
             }
             return Ok(response);
+        }
+        
+        [HttpGet("GetEthnicityList")]
+        public async Task<IActionResult> GetEthnicityList()
+        {
+            return Ok(await service.GetEthnicityList());
         }
 
         [HttpPost("AddUpdateEthnicityInfo")]
