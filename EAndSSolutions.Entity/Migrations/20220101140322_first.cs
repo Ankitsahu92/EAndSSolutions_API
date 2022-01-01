@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EAndSSolutions.Entity.Migrations
 {
-    public partial class firstmigration : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -64,8 +64,8 @@ namespace EAndSSolutions.Entity.Migrations
                     CellPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HomePhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateOfHire = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateOfFirstCase = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DateOfHire = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateOfFirstCase = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EmployeeID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HRSupervisor = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ethnicity = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -76,6 +76,7 @@ namespace EAndSSolutions.Entity.Migrations
                     EmergencyPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EmergencyContact = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MaritalStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DOB = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedByIP = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -139,23 +140,27 @@ namespace EAndSSolutions.Entity.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedByIP", "CreatedOn", "ModifiedBy", "ModifiedByIP", "ModifiedOn", "Name", "Type", "isActive" },
                 values: new object[,]
                 {
-                    { 1, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5051), null, null, null, "Male", 1, true },
-                    { 2, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5052), null, null, null, "Female", 1, true },
-                    { 3, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5091), null, null, null, "Nurse 1", 4, true },
-                    { 4, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5093), null, null, null, "Nurse 2", 4, true },
-                    { 5, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5094), null, null, null, "New York", 3, true },
-                    { 6, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5095), null, null, null, "Case Coordinator 1", 5, true },
-                    { 7, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5096), null, null, null, "Case Coordinator 2", 5, true },
-                    { 8, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5097), null, null, null, "HR Supervisor 1", 6, true },
-                    { 9, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5099), null, null, null, "HR Supervisor 2", 6, true },
-                    { 10, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5100), null, null, null, "Ethnicity 1", 7, true },
-                    { 11, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5101), null, null, null, "Ethnicity 2", 7, true }
+                    { 1, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7036), null, null, null, "Male", 1, true },
+                    { 2, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7038), null, null, null, "Female", 1, true },
+                    { 3, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7039), null, null, null, "Nurse 1", 4, true },
+                    { 4, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7040), null, null, null, "Nurse 2", 4, true },
+                    { 5, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7041), null, null, null, "New York", 3, true },
+                    { 6, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7042), null, null, null, "Case Coordinator 1", 5, true },
+                    { 7, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7043), null, null, null, "Case Coordinator 2", 5, true },
+                    { 8, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7044), null, null, null, "HR Supervisor 1", 6, true },
+                    { 9, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7045), null, null, null, "HR Supervisor 2", 6, true },
+                    { 10, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7046), null, null, null, "Ethnicity 1", 7, true },
+                    { 11, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7047), null, null, null, "Ethnicity 2", 7, true },
+                    { 12, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7048), null, null, null, "Married", 2, true },
+                    { 13, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7049), null, null, null, "Single", 2, true },
+                    { 14, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7050), null, null, null, "Divorced", 2, true },
+                    { 15, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7051), null, null, null, "Separated", 2, true }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "CreatedBy", "CreatedByIP", "CreatedOn", "FirstName", "LastName", "ModifiedBy", "ModifiedByIP", "ModifiedOn", "Password", "UserName", "isActive" },
-                values: new object[] { 1, 1, null, new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(4939), "System", "", null, null, null, "System@1234", "System@gmail.com", true });
+                values: new object[] { 1, 1, null, new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(6941), "System", "", null, null, null, "System@1234", "System@gmail.com", true });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

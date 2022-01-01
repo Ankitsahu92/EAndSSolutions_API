@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EAndSSolutions.Entity.Migrations
 {
     [DbContext(typeof(EAndSSolutionsContext))]
-    [Migration("20211231025810_firstmigration")]
-    partial class firstmigration
+    [Migration("20220101140322_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -207,14 +207,16 @@ namespace EAndSSolutions.Entity.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DateOfFirstCase")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("datetime2")
+                        .HasColumnOrder(20);
+
+                    b.Property<DateTime>("DateOfFirstCase")
+                        .HasColumnType("datetime2")
                         .HasColumnOrder(9);
 
-                    b.Property<string>("DateOfHire")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                    b.Property<DateTime>("DateOfHire")
+                        .HasColumnType("datetime2")
                         .HasColumnOrder(8);
 
                     b.Property<string>("Email")
@@ -357,7 +359,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5051),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7036),
                             Name = "Male",
                             Type = 1,
                             isActive = true
@@ -366,7 +368,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5052),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7038),
                             Name = "Female",
                             Type = 1,
                             isActive = true
@@ -375,7 +377,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 3,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5091),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7039),
                             Name = "Nurse 1",
                             Type = 4,
                             isActive = true
@@ -384,7 +386,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 4,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5093),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7040),
                             Name = "Nurse 2",
                             Type = 4,
                             isActive = true
@@ -393,7 +395,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 5,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5094),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7041),
                             Name = "New York",
                             Type = 3,
                             isActive = true
@@ -402,7 +404,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 6,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5095),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7042),
                             Name = "Case Coordinator 1",
                             Type = 5,
                             isActive = true
@@ -411,7 +413,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 7,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5096),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7043),
                             Name = "Case Coordinator 2",
                             Type = 5,
                             isActive = true
@@ -420,7 +422,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 8,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5097),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7044),
                             Name = "HR Supervisor 1",
                             Type = 6,
                             isActive = true
@@ -429,7 +431,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 9,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5099),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7045),
                             Name = "HR Supervisor 2",
                             Type = 6,
                             isActive = true
@@ -438,7 +440,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 10,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5100),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7046),
                             Name = "Ethnicity 1",
                             Type = 7,
                             isActive = true
@@ -447,9 +449,45 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 11,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(5101),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7047),
                             Name = "Ethnicity 2",
                             Type = 7,
+                            isActive = true
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedBy = 1,
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7048),
+                            Name = "Married",
+                            Type = 2,
+                            isActive = true
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreatedBy = 1,
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7049),
+                            Name = "Single",
+                            Type = 2,
+                            isActive = true
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CreatedBy = 1,
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7050),
+                            Name = "Divorced",
+                            Type = 2,
+                            isActive = true
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreatedBy = 1,
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7051),
+                            Name = "Separated",
+                            Type = 2,
                             isActive = true
                         });
                 });
@@ -510,7 +548,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2021, 12, 31, 8, 28, 10, 731, DateTimeKind.Local).AddTicks(4939),
+                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(6941),
                             FirstName = "System",
                             LastName = "",
                             Password = "System@1234",

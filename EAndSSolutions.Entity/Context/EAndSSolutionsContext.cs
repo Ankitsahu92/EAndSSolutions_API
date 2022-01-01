@@ -122,8 +122,39 @@ namespace EAndSSolutions.Entity.Context
                      Type = (int)MasterDataEnums.Ethnicity,
                      CreatedBy = 1,
                      CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 12,
+                     Name = "Married",
+                     Type = (int)MasterDataEnums.MaritalStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 13,
+                     Name = "Single",
+                     Type = (int)MasterDataEnums.MaritalStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 14,
+                     Name = "Divorced",
+                     Type = (int)MasterDataEnums.MaritalStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 },
+                 new MasterData
+                 {
+                     Id = 15,
+                     Name = "Separated",
+                     Type = (int)MasterDataEnums.MaritalStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
                  }
-
             );
         }
     }

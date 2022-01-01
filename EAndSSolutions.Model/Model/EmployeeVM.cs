@@ -36,10 +36,10 @@ namespace EAndSSolutions.Model.Model
         public string Email { get; set; }
         [Required]
         [Column(Order = 8)]
-        public string DateOfHire { get; set; }
+        public DateTime DateOfHire { get; set; }
         [Required]
         [Column(Order = 9)]
-        public string DateOfFirstCase { get; set; }
+        public DateTime DateOfFirstCase { get; set; }
         [Required]
         [Column(Order = 10)]
         public string EmployeeID { get; set; }
@@ -73,5 +73,9 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 19)]
         public string MaritalStatus { get; set; }
+
+        [Required]
+        [Column(Order = 20)]
+        public DateTime DOB { get; set; }
     }
 }
