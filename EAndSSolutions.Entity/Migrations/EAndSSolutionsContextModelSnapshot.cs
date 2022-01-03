@@ -33,135 +33,160 @@ namespace EAndSSolutions.Entity.Migrations
 
                     b.Property<string>("BillTo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(2);
 
                     b.Property<string>("CaseCoordinator")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(15);
 
                     b.Property<string>("CaseWorkerEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(24);
 
                     b.Property<string>("CaseWorkerPhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(22);
 
                     b.Property<string>("CellPhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(6);
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(17);
 
                     b.Property<string>("ClientID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(12);
 
                     b.Property<string>("County")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(18);
 
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
                     b.Property<string>("CreatedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(8);
 
                     b.Property<string>("EmergencyContact")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(23);
 
                     b.Property<string>("Ethnicity")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(7);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(3);
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(13);
 
                     b.Property<string>("InsurenceID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(9);
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(5);
 
                     b.Property<string>("MaritalStatus")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(16);
 
                     b.Property<string>("MiddleName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(4);
 
                     b.Property<int?>("ModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<string>("ModifiedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NoOfChildren")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(10);
 
                     b.Property<string>("Nurse")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(14);
 
                     b.Property<string>("ReferredBy")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(21);
 
                     b.Property<string>("SSN")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(11);
 
                     b.Property<string>("State")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(19);
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(20);
 
                     b.Property<bool>("isActive")
@@ -183,24 +208,28 @@ namespace EAndSSolutions.Entity.Migrations
 
                     b.Property<string>("CellPhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(5);
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(13);
 
                     b.Property<string>("County")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(14);
 
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
                     b.Property<string>("CreatedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -219,85 +248,101 @@ namespace EAndSSolutions.Entity.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(7);
 
                     b.Property<string>("EmergencyContact")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(18);
 
                     b.Property<string>("EmergencyPhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(17);
 
                     b.Property<string>("EmployeeID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(10);
 
                     b.Property<string>("Ethnicity")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(12);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(2);
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("HRSupervisor")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(11);
 
                     b.Property<string>("HomePhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(6);
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(4);
 
                     b.Property<string>("MaritalStatus")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(19);
 
                     b.Property<string>("MiddleName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(3);
 
                     b.Property<int?>("ModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<string>("ModifiedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("SSN")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(1);
 
                     b.Property<string>("State")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
                         .HasColumnOrder(15);
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
                         .HasColumnOrder(16);
 
                     b.Property<bool>("isActive")
@@ -321,7 +366,8 @@ namespace EAndSSolutions.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreatedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -330,7 +376,8 @@ namespace EAndSSolutions.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ModifiedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
@@ -357,7 +404,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7036),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9919),
                             Name = "Male",
                             Type = 1,
                             isActive = true
@@ -366,7 +413,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7038),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9921),
                             Name = "Female",
                             Type = 1,
                             isActive = true
@@ -375,7 +422,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 3,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7039),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9922),
                             Name = "Nurse 1",
                             Type = 4,
                             isActive = true
@@ -384,7 +431,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 4,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7040),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9923),
                             Name = "Nurse 2",
                             Type = 4,
                             isActive = true
@@ -393,7 +440,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 5,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7041),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9924),
                             Name = "New York",
                             Type = 3,
                             isActive = true
@@ -402,7 +449,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 6,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7042),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9925),
                             Name = "Case Coordinator 1",
                             Type = 5,
                             isActive = true
@@ -411,7 +458,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 7,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7043),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9926),
                             Name = "Case Coordinator 2",
                             Type = 5,
                             isActive = true
@@ -420,7 +467,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 8,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7044),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9927),
                             Name = "HR Supervisor 1",
                             Type = 6,
                             isActive = true
@@ -429,7 +476,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 9,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7045),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9928),
                             Name = "HR Supervisor 2",
                             Type = 6,
                             isActive = true
@@ -438,7 +485,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 10,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7046),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9929),
                             Name = "Ethnicity 1",
                             Type = 7,
                             isActive = true
@@ -447,7 +494,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 11,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7047),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9930),
                             Name = "Ethnicity 2",
                             Type = 7,
                             isActive = true
@@ -456,7 +503,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 12,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7048),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9932),
                             Name = "Married",
                             Type = 2,
                             isActive = true
@@ -465,7 +512,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 13,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7049),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9933),
                             Name = "Single",
                             Type = 2,
                             isActive = true
@@ -474,7 +521,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 14,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7050),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9934),
                             Name = "Divorced",
                             Type = 2,
                             isActive = true
@@ -483,7 +530,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 15,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(7051),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9935),
                             Name = "Separated",
                             Type = 2,
                             isActive = true
@@ -502,7 +549,8 @@ namespace EAndSSolutions.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreatedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -520,7 +568,8 @@ namespace EAndSSolutions.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ModifiedByIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
@@ -546,7 +595,7 @@ namespace EAndSSolutions.Entity.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 1, 1, 19, 33, 22, 251, DateTimeKind.Local).AddTicks(6941),
+                            CreatedOn = new DateTime(2022, 1, 3, 21, 0, 46, 931, DateTimeKind.Local).AddTicks(9804),
                             FirstName = "System",
                             LastName = "",
                             Password = "System@1234",

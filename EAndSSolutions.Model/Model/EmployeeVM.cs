@@ -14,25 +14,25 @@ namespace EAndSSolutions.Model.Model
         [Column(Order = 0)]
         public int Id { get; set; }
         [Required]
-        [Column(Order = 1)]
+        [Column(Order = 1),MaxLength(25)]
         public string SSN { get; set; }
         [Required]
-        [Column(Order = 2)]
+        [Column(Order = 2), MaxLength(25)]
         public string FirstName { get; set; }
         [Required]
-        [Column(Order = 3)]
+        [Column(Order = 3), MaxLength(25)]
         public string MiddleName { get; set; }
         [Required]
-        [Column(Order = 4)]
+        [Column(Order = 4), MaxLength(25)]
         public string LastName { get; set; }
         [Required]
-        [Column(Order = 5)]
+        [Column(Order = 5), MaxLength(15)]
         public string CellPhone { get; set; }
         [Required]
-        [Column(Order = 6)]
+        [Column(Order = 6), MaxLength(15)]
         public string HomePhone { get; set; }
         [Required]
-        [Column(Order = 7)]
+        [Column(Order = 7), MaxLength(25)]
         public string Email { get; set; }
         [Required]
         [Column(Order = 8)]
@@ -41,37 +41,37 @@ namespace EAndSSolutions.Model.Model
         [Column(Order = 9)]
         public DateTime DateOfFirstCase { get; set; }
         [Required]
-        [Column(Order = 10)]
+        [Column(Order = 10), MaxLength(25)]
         public string EmployeeID { get; set; }
-        [Required]
+        [Required, MaxLength(25)]
         public string Gender { get; set; }
         [Required]
-        [Column(Order = 11)]
+        [Column(Order = 11), MaxLength(25)]
         public string HRSupervisor { get; set; }
         [Required]
-        [Column(Order = 12)]
+        [Column(Order = 12), MaxLength(25)]
         public string Ethnicity { get; set; }
        
-        [Required]
+        [Required, MaxLength(25)]
         [Column(Order = 13)]
         public string City { get; set; }
         [Required]
-        [Column(Order = 14)]
+        [Column(Order = 14), MaxLength(25)]
         public string County { get; set; }
         [Required]
-        [Column(Order = 15)]
+        [Column(Order = 15), MaxLength(25)]
         public string State { get; set; }
         [Required]
-        [Column(Order = 16)]
+        [Column(Order = 16), MaxLength(15)]
         public string ZipCode { get; set; }
         [Required]
-        [Column(Order = 17)]
+        [Column(Order = 17), MaxLength(15)]
         public string EmergencyPhone { get; set; }
         [Required]
-        [Column(Order = 18)]
+        [Column(Order = 18), MaxLength(15)]
         public string EmergencyContact { get; set; }
         [Required]
-        [Column(Order = 19)]
+        [Column(Order = 19), MaxLength(25)]
         public string MaritalStatus { get; set; }
 
         [Required]
