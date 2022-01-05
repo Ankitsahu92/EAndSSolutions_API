@@ -4,6 +4,7 @@ using EAndSSolutions.Entity.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EAndSSolutions.Entity.Migrations
 {
     [DbContext(typeof(EAndSSolutionsContext))]
-    partial class EAndSSolutionsContextModelSnapshot : ModelSnapshot
+    [Migration("20220105030442_APIChanges05Jan")]
+    partial class APIChanges05Jan
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

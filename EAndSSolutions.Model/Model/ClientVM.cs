@@ -19,7 +19,6 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 3), MaxLength(25)]
         public string FirstName { get; set; }
-        [Required]
         [Column(Order = 4), MaxLength(25)]
         public string MiddleName { get; set; }
         [Required]
@@ -28,16 +27,13 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 6), MaxLength(15)]
         public string CellPhone { get; set; }
-        [Required]
         [Column(Order = 7), MaxLength(25)]
         public string Ethnicity { get; set; }
-        [Required]
         [Column(Order = 8), MaxLength(25)]
         public string Email { get; set; }
         [Required]
         [Column(Order = 9), MaxLength(25)]
         public string InsurenceID { get; set; }
-        [Required]
         [Column(Order = 10), MaxLength(25)]
         public string NoOfChildren { get; set; }
         [Required]
@@ -55,7 +51,6 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 15), MaxLength(25)]
         public string CaseCoordinator { get; set; }
-        [Required]
         [Column(Order = 16), MaxLength(25)]
         public string MaritalStatus { get; set; }
         [Required]

@@ -17,5 +17,7 @@ namespace EAndSSolutions.BAL.IService
         Task<IEnumerable<MasterDataVM>> GetNurseList();
         Task<IEnumerable<MasterDataVM>> GetHRSupervisorList();
         Task<IEnumerable<MasterDataVM>> GetEthnicityList();
+        Task<IEnumerable<MasterDataVM>> GetClientStatusList();
+        Task<IEnumerable<MasterDataVM>> GetEmployeeStatusList();
     }
 }

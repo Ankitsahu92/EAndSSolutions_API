@@ -16,7 +16,9 @@ namespace EAndSSolutions.Common.Enums
             Nurse,
             CaseCoordinator,
             HRSupervisor,
-            Ethnicity
+            Ethnicity,
+            ClientStatus,
+            EmployeeStatus,
         }
     }
 }

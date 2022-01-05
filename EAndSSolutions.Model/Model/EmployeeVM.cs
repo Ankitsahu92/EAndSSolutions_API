@@ -19,7 +19,7 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 2), MaxLength(25)]
         public string FirstName { get; set; }
-        [Required]
+
         [Column(Order = 3), MaxLength(25)]
         public string MiddleName { get; set; }
         [Required]
@@ -34,12 +34,11 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 7), MaxLength(25)]
         public string Email { get; set; }
-        [Required]
+
         [Column(Order = 8)]
-        public DateTime DateOfHire { get; set; }
-        [Required]
+        public DateTime? DateOfHire { get; set; }
         [Column(Order = 9)]
-        public DateTime DateOfFirstCase { get; set; }
+        public DateTime? DateOfFirstCase { get; set; }
         [Required]
         [Column(Order = 10), MaxLength(25)]
         public string EmployeeID { get; set; }
@@ -48,7 +47,6 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 11), MaxLength(25)]
         public string HRSupervisor { get; set; }
-        [Required]
         [Column(Order = 12), MaxLength(25)]
         public string Ethnicity { get; set; }
        

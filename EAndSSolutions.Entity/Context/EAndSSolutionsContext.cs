@@ -154,6 +154,83 @@ namespace EAndSSolutions.Entity.Context
                      Type = (int)MasterDataEnums.MaritalStatus,
                      CreatedBy = 1,
                      CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 16,
+                     Name = "Start of Care",
+                     Type = (int)MasterDataEnums.ClientStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 17,
+                     Name = "Admitted Date",
+                     Type = (int)MasterDataEnums.ClientStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 18,
+                     Name = "Inquiry",
+                     Type = (int)MasterDataEnums.ClientStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 19,
+                     Name = "Discharge",
+                     Type = (int)MasterDataEnums.ClientStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 20,
+                     Name = "Inactive",
+                     Type = (int)MasterDataEnums.ClientStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 21,
+                     Name = "Active",
+                     Type = (int)MasterDataEnums.ClientStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 22,
+                     Name = "Applicant",
+                     Type = (int)MasterDataEnums.EmployeeStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 23,
+                     Name = "Active",
+                     Type = (int)MasterDataEnums.EmployeeStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 24,
+                     Name = "Inactive",
+                     Type = (int)MasterDataEnums.EmployeeStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 25,
+                     Name = "Terminated",
+                     Type = (int)MasterDataEnums.EmployeeStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
+                 }, new MasterData
+                 {
+                     Id = 26,
+                     Name = "Quit",
+                     Type = (int)MasterDataEnums.EmployeeStatus,
+                     CreatedBy = 1,
+                     CreatedOn = DateTime.Now
                  }
             );
         }

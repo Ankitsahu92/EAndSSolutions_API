@@ -63,5 +63,13 @@ namespace EAndSSolutions.BAL.Service
         {
             return await unitOfWork.MasterData.Find(f => f.Type == (int)MasterDataEnums.Ethnicity && f.isActive == true);
         }
+        public async Task<IEnumerable<MasterDataVM>> GetClientStatusList()
+        {
+            return await unitOfWork.MasterData.Find(f => f.Type == (int)MasterDataEnums.ClientStatus && f.isActive == true);
+        }
+        public async Task<IEnumerable<MasterDataVM>> GetEmployeeStatusList()
+        {
+            return await unitOfWork.MasterData.Find(f => f.Type == (int)MasterDataEnums.EmployeeStatus && f.isActive == true);
+        }
     }
 }

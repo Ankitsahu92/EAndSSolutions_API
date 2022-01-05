@@ -208,5 +208,59 @@ namespace API_EAndSSolutions.Controllers
             }
             return Ok(response);
         }
+
+        [HttpGet("GetClientStatusList")]
+        public async Task<IActionResult> GetClientStatusList()
+        {
+            return Ok(await service.GetClientStatusList());
+        }
+
+        [HttpPost("AddUpdateClientStatusInfo")]
+        public async Task<IActionResult> AddUpdateClientStatusInfo(MasterDataRequest obj)
+        {
+            MasterDataVM masterDataVM = new MasterDataVM()
+            {
+                Id = obj.Id,
+                Name = obj.Name,
+                isActive = obj.isActive,
+                Type = (int)MasterDataEnums.ClientStatus
+            };
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "Client Status Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
+        }
+
+        [HttpGet("GetEmployeeStatusList")]
+        public async Task<IActionResult> GetEmployeeStatusList()
+        {
+            return Ok(await service.GetEmployeeStatusList());
+        }
+
+        [HttpPost("AddUpdateEmployeeStatusInfo")]
+        public async Task<IActionResult> AddUpdateEmployeeStatusInfo(MasterDataRequest obj)
+        {
+            MasterDataVM masterDataVM = new MasterDataVM()
+            {
+                Id = obj.Id,
+                Name = obj.Name,
+                isActive = obj.isActive,
+                Type = (int)MasterDataEnums.EmployeeStatus
+            };
+            var response = new InsertUpdateResponse<MasterDataVM>();
+            var result = await service.AddAndUpdateMasterData(masterDataVM);
+            if (result != null)
+            {
+                response.Success = true;
+                response.Message = "Employee Status Added/Update Successfully !!!";
+                response.Data = result;
+            }
+            return Ok(response);
+        }
     }
 }
