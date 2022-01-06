@@ -75,5 +75,9 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 20)]
         public DateTime DOB { get; set; }
+
+        [Required]
+        [Column(Order = 21), MaxLength(50)]
+        public string Status { get; set; }
     }
 }

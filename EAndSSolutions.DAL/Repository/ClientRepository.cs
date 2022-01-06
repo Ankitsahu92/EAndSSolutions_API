@@ -23,39 +23,61 @@ namespace EAndSSolutions.DAL.Repository
             this.context = context;
         }
 
-        public async Task<ClientVM?> AddAndUpdateClient(ClientVM userObj)
+        public async Task<ClientVM?> AddAndUpdateClient(ClientVM clientObj)
         {
             bool isSuccess = false;
-            if (userObj.Id > 0)
+            if (clientObj.Id > 0)
             {
-                var obj = await context.Users.SingleOrDefaultAsync(u => u.Id == userObj.Id);
+                var obj = await context.Client.SingleOrDefaultAsync(u => u.Id == clientObj.Id);
                 if (obj != null)
                 {
-                    obj.FirstName = userObj.FirstName;
-                    obj.LastName = userObj.LastName;
-                    obj.ModifiedBy = userObj.ModifiedBy;
+                    obj.BillTo = clientObj.BillTo;
+                    obj.CaseCoordinator = clientObj.CaseCoordinator;
+                    obj.CaseWorkerEmail = clientObj.CaseWorkerEmail;
+                    obj.CaseWorkerPhone = clientObj.CaseWorkerPhone;
+                    obj.CellPhone = clientObj.CellPhone;
+                    obj.City = clientObj.City;
+                    obj.ClientID = clientObj.ClientID;
+                    obj.County = clientObj.County;
+                    obj.Email = clientObj.Email;
+                    obj.EmergencyContact = clientObj.EmergencyContact;
+                    obj.Ethnicity = clientObj.Ethnicity;
+                    obj.FirstName = clientObj.FirstName;
+                    obj.Gender = clientObj.Gender;
+                    obj.InsurenceID = clientObj.InsurenceID;
+                    obj.isActive = clientObj.isActive;
+                    obj.LastName = clientObj.LastName;
+                    obj.MaritalStatus = clientObj.MaritalStatus;
+                    obj.MiddleName = clientObj.MiddleName;
+                    obj.ModifiedBy = clientObj.ModifiedBy;
+                    obj.ModifiedByIP = clientObj.ModifiedByIP;
                     obj.ModifiedOn = DateTime.Now;
-                    obj.ModifiedByIP = userObj.ModifiedByIP;
-                    obj.isActive = userObj.isActive;
-                    
+                    obj.NoOfChildren = clientObj.NoOfChildren;
+                    obj.Nurse = clientObj.Nurse;
+                    obj.ReferredBy = clientObj.ReferredBy;
+                    obj.SSN = clientObj.SSN;
+                    obj.State = clientObj.State;
+                    obj.Status = clientObj.Status;
+                    obj.ZipCode = clientObj.ZipCode;
                     context.Update(obj);
                     isSuccess = await context.SaveChangesAsync() > 0;
                 }
             }
             else
             {
-                Client user = mapper.Map<Client>(userObj);
-                user.isActive = true;
-                await context.Client.AddAsync(user);
+                Client client = mapper.Map<Client>(clientObj);
+                client.isActive = true;
+                client.CreatedOn = DateTime.Now;
+                await context.Client.AddAsync(client);
                 int id = await context.SaveChangesAsync();
                 if (id > 0)
                 {
                     isSuccess = true;
-                    userObj.Id = id;
+                    clientObj.Id = id;
                 }
             }
 
-            return isSuccess ? userObj : null;
+            return isSuccess ? clientObj : null;
         }
 
 

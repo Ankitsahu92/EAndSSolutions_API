@@ -77,5 +77,9 @@ namespace EAndSSolutions.Model.Model
         [Required]
         [Column(Order = 24), MaxLength(25)]
         public string CaseWorkerEmail { get; set; }
+
+        [Required]
+        [Column(Order = 25), MaxLength(50)]
+        public string Status { get; set; }
     }
 }

@@ -23,16 +23,35 @@ namespace EAndSSolutions.DAL.Repository
             bool isSuccess = false;
             if (empObj.Id > 0)
             {
-                var obj = await context.Users.SingleOrDefaultAsync(u => u.Id == empObj.Id);
+                var obj = await context.Employee.SingleOrDefaultAsync(u => u.Id == empObj.Id);
                 if (obj != null)
                 {
+                    obj.ZipCode = empObj.ZipCode;
+                    obj.Status = empObj.Status;
+                    obj.State = empObj.State;
+                    obj.SSN = empObj.SSN;
+                    obj.CellPhone = empObj.CellPhone;
+                    obj.City = empObj.City;
+                    obj.County = empObj.County;
+                    obj.DateOfFirstCase = empObj.DateOfFirstCase;
+                    obj.DateOfHire = empObj.DateOfHire;
+                    obj.DOB = empObj.DOB;
+                    obj.Email = empObj.Email;
+                    obj.EmergencyContact = empObj.EmergencyContact;
+                    obj.EmergencyPhone = empObj.EmergencyPhone;
+                    obj.EmployeeID = empObj.EmployeeID;
+                    obj.Ethnicity = empObj.Ethnicity;
                     obj.FirstName = empObj.FirstName;
+                    obj.Gender = empObj.Gender;
                     obj.LastName = empObj.LastName;
-                    obj.ModifiedBy = empObj.ModifiedBy;
-                    obj.ModifiedOn = DateTime.Now;
-                    obj.ModifiedByIP = empObj.ModifiedByIP;
+                    obj.HomePhone = empObj.HomePhone;
+                    obj.HRSupervisor = empObj.HRSupervisor;
                     obj.isActive = empObj.isActive;
-                    
+                    obj.MaritalStatus = empObj.MaritalStatus;
+                    obj.MiddleName = empObj.MiddleName;
+                    obj.ModifiedBy = empObj.ModifiedBy;
+                    obj.ModifiedByIP = empObj.ModifiedByIP;
+                    obj.ModifiedOn = DateTime.Now;
                     context.Update(obj);
                     isSuccess = await context.SaveChangesAsync() > 0;
                 }
@@ -41,6 +60,7 @@ namespace EAndSSolutions.DAL.Repository
             {
                 Employee emp = mapper.Map<Employee>(empObj);
                 emp.isActive = true;
+                emp.CreatedOn = DateTime.Now;
                 await context.Employee.AddAsync(emp);
                 int id = await context.SaveChangesAsync();
                 if (id > 0)
