@@ -16,11 +16,7 @@ namespace API_EAndSSolutions.Controllers
         {
             this.service = service;
         }
-        [HttpGet("GetTest")]
-        public async Task<IActionResult> GetTest()
-        {
-            return Ok("Hi Test");
-        }
+       
         [HttpGet]
         public async Task<IActionResult> Get()
         {

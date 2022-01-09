@@ -33,9 +33,9 @@ namespace EAndSSolutions.DAL.Repository
                     obj.CellPhone = empObj.CellPhone;
                     obj.City = empObj.City;
                     obj.County = empObj.County;
-                    obj.DateOfFirstCase = empObj.DateOfFirstCase;
-                    obj.DateOfHire = empObj.DateOfHire;
-                    obj.DOB = empObj.DOB;
+                    obj.DateOfFirstCase = empObj.DateOfFirstCase?.ToLocalTime();
+                    obj.DateOfHire = empObj.DateOfHire?.ToLocalTime();
+                    obj.DOB = empObj.DOB.ToLocalTime();
                     obj.Email = empObj.Email;
                     obj.EmergencyContact = empObj.EmergencyContact;
                     obj.EmergencyPhone = empObj.EmergencyPhone;
